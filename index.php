@@ -1,0 +1,3 @@
+Kirby::plugin('wearecandyblue/plugin', [
+
+]);

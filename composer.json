@@ -1,0 +1,12 @@
+{
+    "name": "superwoman/superplugin",
+    "description": "Superwoman Demo Plugin",
+    "version": "1.0.0",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Superwoman",
+            "email": "superwoman@example.com"
+        }
+    ]
+}
