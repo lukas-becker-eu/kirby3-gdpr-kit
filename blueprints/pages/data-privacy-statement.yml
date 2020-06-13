@@ -1,0 +1,9 @@
+title:
+  de: Datenschutzbestimmungen
+  en: Data privacy statement
+preset: page
+fields:
+  text:
+    label: Text
+    type: textarea
+    size: large

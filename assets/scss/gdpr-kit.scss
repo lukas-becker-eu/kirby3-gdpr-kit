@@ -1,3 +1,57 @@
+/* GDPR KIT */
+
+.gdpr-kit__cookie-consent-banner {
+  background-color: #fff;
+  position: fixed;
+  left: 25px;
+  bottom: 40px;
+  max-width: 490px;
+  height: auto;
+  padding: 10px 15px 15px;
+  border: 1px solid hsla(0,0%,91.8%,.54);
+  -webkit-transform: translateY(40%);
+  transform: translateY(40%);
+  opacity: 0;
+  visibility: hidden;
+  z-index: 10;
+
+  visibility: inherit;
+  opacity: 1;
+  transform: matrix(1, 0, 0, 1, 0, 0);
+  & > p {
+    font-size: .6875em;
+    line-height: 1.81818;
+    color: rgba(75,75,76,.54);
+    -webkit-transition: all .2s cubic-bezier(.25,.46,.45,.94);
+    transition: all .2s cubic-bezier(.25,.46,.45,.94);
+    & > a {
+      text-transform: none;
+      text-decoration: underline;
+    }
+  }
+  &__btn {
+    display: block;
+    font-size: 10px;
+    color: rgba(75,75,76,.54);
+    letter-spacing: .5px;
+    text-transform: uppercase;
+    text-decoration: underline;
+    margin-top: 20px;
+    -webkit-transition: all .2s cubic-bezier(.25,.46,.45,.94);
+    transition: all .2s cubic-bezier(.25,.46,.45,.94);
+    &--reject {
+
+    }
+    &--approve {
+
+    }
+  }
+}
+
+
+
+/*
+
 $ka-cookie-bg: #222 !default;
 $ka-cookie-color: #fff !default;
 $ka-cookie-link-color: #31a8f0 !default;
@@ -136,3 +190,5 @@ $ka-cookie-position: bottom-right !default;
     display: none
   }
 }
+
+*/
