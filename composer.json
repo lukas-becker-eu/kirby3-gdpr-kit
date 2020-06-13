@@ -1,12 +1,12 @@
 {
-    "name": "superwoman/superplugin",
-    "description": "Superwoman Demo Plugin",
+    "name": "wearecandyblue/gdpr-kit",
+    "description": "",
     "version": "1.0.0",
     "license": "MIT",
     "authors": [
         {
-            "name": "Superwoman",
-            "email": "superwoman@example.com"
+            "name": "Digitalagentur candyblue UG (haftungsbeschränkt)",
+            "email": "hi@candyblue.agency"
         }
     ]
 }
