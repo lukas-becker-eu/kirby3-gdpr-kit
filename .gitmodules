@@ -1,0 +1,3 @@
+[submodule "vendor/gdpr-kit"]
+	path = vendor/gdpr-kit
+	url = https://github.com/wearecandyblue/gdpr-kit.git
