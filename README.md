@@ -6,3 +6,8 @@ Clone this repo with ```$ git clone https://github.com/wearecandyblue/kirby3-gdp
 
 
 ```$ git submodule update --recursive --remote```
+
+
+```
+../assets/css/gdpr-kit.css
+```
