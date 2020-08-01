@@ -2,7 +2,7 @@
 type: group
 fields:
   gdprKit:
-    label: GDPR-Kit
+    label: GDPR-Kit - Cookie-Banner
     type: headline
     numbered: false
 
@@ -27,7 +27,7 @@ fields:
     width: 1/2
 
   gdprKitCookieBannerSettingsMandatory:
-    label: Erforderliche Cookies
+    label: GDPR-Kit - erforderliche Cookies
     type: headline
     numbered: false
 
@@ -52,7 +52,7 @@ fields:
     required: true
 
   gdprKitCookieBannerSettingsAnalytics:
-    label: Analytics-Cookies
+    label: GDPR-Kit - Analytics-Cookies
     type: headline
     numbered: false
 
@@ -77,7 +77,7 @@ fields:
     required: true
 
   gdprKitCookieBannerSettingsMarketing:
-    label: Marketing-Cookies
+    label: GDPR-Kit - Marketing-Cookies
     type: headline
     numbered: false
 
@@ -102,12 +102,12 @@ fields:
     required: true
 
   gdprKitCookieBannerFurtherDetails:
-    label: Analytics-Cookies
+    label: GDPR-Kit - weiterführende Informationen
     type: headline
     numbered: false
 
   gdprKitFurtherDetailsText:
-    label: Weitere Informationen
+    label: Text
     type: textarea
     size: small
     buttons: false

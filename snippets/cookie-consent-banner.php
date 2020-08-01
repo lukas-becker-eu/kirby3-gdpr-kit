@@ -41,60 +41,66 @@ if($kirby->option('languages'));
          * MANDATORY
          */
         ?>
-        <div class="gdpr-kit__setting">
-          <div class="gdpr-kit__setting__text">
-            <?php if($site->gdprKitCookieBannerSettingsMandatoryTitle()->isNotEmpty()): ?>
-              <strong><?php echo html::decode($site->gdprKitCookieBannerSettingsMandatoryTitle()->html()) ?></strong>
-            <?php endif ?>
-            <?php if($site->gdprKitCookieBannerSettingsMandatoryDescription()->isNotEmpty()): ?>
-              <p><?php echo html::decode($site->gdprKitCookieBannerSettingsMandatoryDescription()->html()) ?></p>
-            <?php endif ?>
-          </div>
-            <label class="gdpr-kit__toggle is-disabled">
-              <input type="checkbox" id="gdprKitMandatoryCookies" class="gdpr-kit__toggle-input" checked disabled/>
-              <span for="gdprKitMandatoryCookies"></span>
-            </label><!-- .gdpr-kit__toggle -->
-        </div>
+        <?php if ($site->gdprKitCookieBannerSettingsMandatoryActive()->toBool() === true): ?>
+          <div class="gdpr-kit__setting">
+            <div class="gdpr-kit__setting__text">
+              <?php if($site->gdprKitCookieBannerSettingsMandatoryTitle()->isNotEmpty()): ?>
+                <strong><?php echo html::decode($site->gdprKitCookieBannerSettingsMandatoryTitle()->html()) ?></strong>
+              <?php endif ?>
+              <?php if($site->gdprKitCookieBannerSettingsMandatoryDescription()->isNotEmpty()): ?>
+                <p><?php echo html::decode($site->gdprKitCookieBannerSettingsMandatoryDescription()->html()) ?></p>
+              <?php endif ?>
+            </div>
+              <label class="gdpr-kit__toggle is-disabled">
+                <input type="checkbox" id="gdprKitMandatoryCookies" class="gdpr-kit__toggle-input" checked disabled/>
+                <span for="gdprKitMandatoryCookies"></span>
+              </label><!-- .gdpr-kit__toggle -->
+          </div><!-- .gdpr-kit__setting -->
+        <?php endif ?>
 
         <?php
         /*
          * ANALYTICS
          */
         ?>
-        <div class="gdpr-kit__setting">
-          <div class="gdpr-kit__setting__text">
-            <?php if($site->gdprKitCookieBannerMessage()->isNotEmpty()): ?>
-              <strong><?php echo html::decode($site->gdprKitCookieBannerActionShowSettings()->html()) ?></strong>
-            <?php endif ?>
-            <?php if($site->gdprKitCookieBannerMessage()->isNotEmpty()): ?>
-              <p><?php echo html::decode($site->gdprKitCookieBannerActionShowSettings()->html()) ?></p>
-            <?php endif ?>
-          </div>
-            <label class="gdpr-kit__toggle">
-              <input type="checkbox" id="gdprKitAnalyticsCookies" class="gdpr-kit__toggle-input"/>
-              <span for="gdprKitAnalyticsCookies"></span>
-            </label><!-- .gdpr-kit__toggle -->
-        </div>
+        <?php if ($site->gdprKitCookieBannerSettingsAnalyticsActive()->toBool() === true): ?>
+          <div class="gdpr-kit__setting">
+            <div class="gdpr-kit__setting__text">
+              <?php if($site->gdprKitCookieBannerSettingsAnalyticsTitle()->isNotEmpty()): ?>
+                <strong><?php echo html::decode($site->gdprKitCookieBannerSettingsAnalyticsTitle()->html()) ?></strong>
+              <?php endif ?>
+              <?php if($site->gdprKitCookieBannerSettingsAnalyticsDescription()->isNotEmpty()): ?>
+                <p><?php echo html::decode($site->gdprKitCookieBannerSettingsAnalyticsDescription()->html()) ?></p>
+              <?php endif ?>
+            </div>
+              <label class="gdpr-kit__toggle">
+                <input type="checkbox" id="gdprKitAnalyticsCookies" class="gdpr-kit__toggle-input"/>
+                <span for="gdprKitAnalyticsCookies"></span>
+              </label><!-- .gdpr-kit__toggle -->
+          </div><!-- .gdpr-kit__setting -->
+        <?php endif ?>
 
         <?php
         /*
          * MARKETING
          */
         ?>
-        <div class="gdpr-kit__setting">
-          <div class="gdpr-kit__setting__text">
-            <?php if($site->gdprKitCookieBannerMessage()->isNotEmpty()): ?>
-              <strong><?php echo html::decode($site->gdprKitCookieBannerActionShowSettings()->html()) ?></strong>
-            <?php endif ?>
-            <?php if($site->gdprKitCookieBannerMessage()->isNotEmpty()): ?>
-              <p><?php echo html::decode($site->gdprKitCookieBannerActionShowSettings()->html()) ?></p>
-            <?php endif ?>
-          </div>
-          <label class="gdpr-kit__toggle">
-            <input type="checkbox" id="gdprKitMarketingCookies" class="gdpr-kit__toggle-input"/>
-            <span for="gdprKitMarketingCookies"></span>
-          </label><!-- .gdpr-kit__toggle -->
-        </div>
+        <?php if ($site->gdprKitCookieBannerSettingsMarketingActive()->toBool() === true): ?>
+          <div class="gdpr-kit__setting">
+            <div class="gdpr-kit__setting__text">
+              <?php if($site->gdprKitCookieBannerSettingsMarketingTitle()->isNotEmpty()): ?>
+                <strong><?php echo html::decode($site->gdprKitCookieBannerSettingsMarketingTitle()->html()) ?></strong>
+              <?php endif ?>
+              <?php if($site->gdprKitCookieBannerSettingsMarketingDescription()->isNotEmpty()): ?>
+                <p><?php echo html::decode($site->gdprKitCookieBannerSettingsMarketingDescription()->html()) ?></p>
+              <?php endif ?>
+            </div>
+            <label class="gdpr-kit__toggle">
+              <input type="checkbox" id="gdprKitMarketingCookies" class="gdpr-kit__toggle-input"/>
+              <span for="gdprKitMarketingCookies"></span>
+            </label><!-- .gdpr-kit__toggle -->
+          </div><!-- .gdpr-kit__setting -->
+        <?php endif ?>
 
         <?php
         /*
