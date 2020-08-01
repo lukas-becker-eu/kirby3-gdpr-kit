@@ -5,16 +5,19 @@ fields:
     label: GDPR-Kit
     type: headline
     numbered: false
+    
   gdprKitCookieBannerMessage:
     label: Message
     type: textarea
     size: small
     buttons: false
+
   gdprKitCookieBannerActionShowSettings:
     label: 'Aktion: Cookie-Einstellungen anpassen'
     type: text
     required: true
     width: 1/2
+
   gdprKitCookieBannerActionAcceptAll:
     label: 'Aktion: Alle Cookies akzeptieren'
     type: text
@@ -22,3 +25,39 @@ fields:
     placeholder: Akzeptieren
     default: Akzeptieren
     width: 1/2
+
+  gdprKitCookieBannerSettingsMandatoryTitle:
+    label: Erforderliche Cookies - Titel
+    type: text
+    required: true
+    placeholder: Erforderliche Cookies
+
+  gdprKitCookieBannerSettingsMandatoryDescription:
+    label: Erforderliche Cookies - Beschreibung
+    type: textarea
+    size: small
+    buttons: false
+
+  gdprKitCookieBannerSettingsAnalyticsTitle:
+    label: Statistik-Cookies - Titel
+    type: text
+    required: true
+    placeholder: Statistik-Cookies
+
+  gdprKitCookieBannerSettingsAnalyticsDescription:
+    label: Statistik-Cookies - Beschreibung
+    type: textarea
+    size: small
+    buttons: false
+
+  gdprKitCookieBannerSettingsMarketingTitle:
+    label: Marketing-Cookies - Titel
+    type: text
+    required: true
+    placeholder: Marketing-Cookies
+
+  gdprKitCookieBannerSettingsMarketingDescription:
+    label: Marketing-Cookies - Beschreibung
+    type: textarea
+    size: small
+    buttons: false

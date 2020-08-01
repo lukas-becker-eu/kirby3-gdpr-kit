@@ -32,7 +32,6 @@ if($kirby->option('languages'));
     <?php if($site->gdprKitCookieBannerMessage()->isNotEmpty()): ?>
       <p class="gdpr-kit__cookie-banner__message">
         <?php echo strip_tags($site->gdprKitCookieBannerMessage()->kirbytext(), '<a>') ?>
-        Diese Website verwendet Cookies zu Analyse- und Marketing-Zwecken. Bitte stimme der Verwendung von Cookies zu. Nur erforderliche Cookies akzeptieren
       </p>
     <?php endif ?>
       <div id="more" class="gdpr-kit__settings">
