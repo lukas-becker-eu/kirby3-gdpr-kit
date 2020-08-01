@@ -6,7 +6,13 @@ fields:
     type: headline
     numbered: false
 
-  gdprKitCookieBannerMessage:
+  gdprKitCookieBannerTitle:
+    label: Titel
+    type: text
+    required: true
+    placeholder: Wir verwenden Cookies
+
+  gdprKitCookieBannerText:
     label: Cookie-Banner-Text
     type: textarea
     size: small

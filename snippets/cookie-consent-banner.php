@@ -29,6 +29,10 @@ if($kirby->option('languages'));
 
 <div class="gdpr-kit">
   <div id="js-gdpr-kit__cookie-banner" class="gdpr-kit__cookie-banner">
+    <?php if($site->gdprKitCookieBannerTitle()->isNotEmpty()): ?>
+      <strong><?php echo html::decode($site->gdprKitCookieBannerTitle()->html()) ?></strong>
+    <?php endif ?>
+
     <?php if($site->gdprKitCookieBannerMessage()->isNotEmpty()): ?>
       <p class="gdpr-kit__cookie-banner__message">
         <?php echo strip_tags($site->gdprKitCookieBannerMessage()->kirbytext(), '<a>') ?>

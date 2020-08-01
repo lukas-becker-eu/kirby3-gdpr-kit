@@ -22,5 +22,9 @@ Kirby::plugin('wearecandyblue/gdpr-kit', [
 
 	'snippets'     => [
 		'cookie-consent-banner' => __DIR__ . '/snippets/cookie-consent-banner.php'
-	]
+	],
+
+	'tags' => [
+    'decline' => require_once __DIR__ . '/tags/decline.php'
+  ]
 ]);
