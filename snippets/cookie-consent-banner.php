@@ -101,9 +101,9 @@ if($kirby->option('languages'));
          * DATA PRIVACY
          */
         ?>
-        <?php if($site->gdprKitCookieBannerMessage()->isNotEmpty()): ?>
+        <?php if($site->gdprKitFurtherDetailsText()->isNotEmpty()): ?>
           <div>
-            <?php echo html::decode($site->gdprKitCookieBannerActionShowSettings()->html()) ?>
+            <?php echo html::decode($site->gdprKitFurtherDetailsText()->html()) ?>
             Ausführlichere Informationen zu den verwendeten Cookies findest Du in unserer <a href="#">Datenschutzerklärung</a>.
           </div>
         <?php endif ?>
