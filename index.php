@@ -16,7 +16,7 @@ Kirby::plugin('wearecandyblue/gdpr-kit', [
 
 	'blueprints' => [
   	'pages/data-privacy-statement' => __DIR__ . '/blueprints/pages/data-privacy-statement.yml',
-		'fields/gdpr-kit' => __DIR__ . '/blueprints/fields/gdpr-kit__cookie-soncent.yml'
+		'fields/gdpr-kit' => __DIR__ . '/blueprints/fields/gdpr-kit.yml'
   ],
 
 	'snippets'     => [

@@ -29,9 +29,12 @@ if($kirby->option('languages'));
 
 <div class="gdpr-kit">
   <div id="js-gdpr-kit__cookie-banner" class="gdpr-kit__cookie-banner">
-    <p class="gdpr-kit__cookie-banner__message">
-      Diese Website verwendet Cookies zu Analyse- und Marketing-Zwecken. Bitte stimme der Verwendung von Cookies zu. Nur erforderliche Cookies akzeptieren
-    </p>
+    <?php if($site->gdprKitCookieBannerMessage()->isNotEmpty()): ?>
+      <p class="gdpr-kit__cookie-banner__message">
+        <?php echo strip_tags($site->gdprKitCookieBannerMessage()->kirbytext(), '<a>') ?>
+        Diese Website verwendet Cookies zu Analyse- und Marketing-Zwecken. Bitte stimme der Verwendung von Cookies zu. Nur erforderliche Cookies akzeptieren
+      </p>
+    <?php endif ?>
       <div id="more" class="gdpr-kit__settings">
 
         <div class="gdpr-kit__setting">
@@ -76,12 +79,16 @@ if($kirby->option('languages'));
 
 
     <div class="gdpr-kit__cookie-banner__actions">
-      <button id="gdprKitShowSettings" class="gdpr-kit__show-settings gdpr-kit__text-link">
-        Einstellungen anpassen
-      </button>
-      <button id="gdpr-kit__submit" class="gdpr-kit__cookie-banner__btn gdpr-kit__cookie-banner__btn--accept" data-cookie-consent-mandatory="1" data-cookie-consent-analytics="0" data-cookie-consent-marketing="0" data-adjust-settings-label="Auswahl speichern">
-        Zustimmen
-      </button>
+      <?php if($site->gdprKitCookieBannerActionShowSettings()->isNotEmpty()): ?>
+        <button id="gdprKitShowSettings" class="gdpr-kit__show-settings gdpr-kit__text-link">
+          <?php echo html::decode($site->gdprKitCookieBannerActionShowSettings()->html()) ?>
+        </button>
+      <?php endif ?>
+      <?php if($site->gdprKitCookieBannerActionAcceptAll()->isNotEmpty()): ?>
+        <button id="gdpr-kit__submit" class="gdpr-kit__cookie-banner__btn gdpr-kit__cookie-banner__btn--accept" data-cookie-consent-mandatory="1" data-cookie-consent-analytics="0" data-cookie-consent-marketing="0" data-adjust-settings-label="Auswahl speichern">
+          <?php echo html::decode($site->gdprKitCookieBannerActionAcceptAll()->html()) ?>
+        </button>
+      <?php endif ?>
     </div><!-- .gdpr-kit__cookie-banner__actions -->
   </div><!-- .gdpr-kit__cookie-banner -->
 </div><!-- .gdpr-kit -->

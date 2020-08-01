@@ -1,0 +1,16 @@
+/gdpr-kit/blueprints/fields/gdpr-kit.yml
+type: group
+fields:
+  gdprKitCookieBannerMessage:
+  gdprKitCookieBannerActionShowSettings:
+    label: 'Aktion: Cookie-Einstellungen anpassen'
+    type: text
+    required: true
+    width: 1/2
+  gdprKitCookieBannerActionAcceptAll:
+    label: 'Aktion: Alle Cookies akzeptieren'
+    type: text
+    required: true
+    placeholder: Akzeptieren
+    default: Akzeptieren
+    width: 1/2
