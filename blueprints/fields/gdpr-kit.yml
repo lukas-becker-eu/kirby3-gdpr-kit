@@ -1,7 +1,15 @@
 /gdpr-kit/blueprints/fields/gdpr-kit.yml
 type: group
 fields:
+  gdprKit:
+    label: GDPR-Kit
+    type: headline
+    numbered: false
   gdprKitCookieBannerMessage:
+    label: Message
+    type: textarea
+    size: small
+    buttons: false
   gdprKitCookieBannerActionShowSettings:
     label: 'Aktion: Cookie-Einstellungen anpassen'
     type: text
