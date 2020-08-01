@@ -1,0 +1,6 @@
+/gdpr-kit/blueprints/fields/gdpr-kit.yml
+label: GDPR-Kit
+icon: settings
+fields:
+
+  gdprKit: fields/gdpr-kit
