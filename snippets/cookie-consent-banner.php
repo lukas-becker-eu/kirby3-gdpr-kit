@@ -36,10 +36,19 @@ if($kirby->option('languages'));
     <?php endif ?>
       <div id="more" class="gdpr-kit__settings">
 
+        <?php
+        /*
+         * MANDATORY
+         */
+        ?>
         <div class="gdpr-kit__setting">
           <div class="gdpr-kit__setting__text">
-            <strong>Erforderliche Cookies</strong>
-            <p>Diese Cookies sind notwendig, damit die Website korrekt funktioniert.</p>
+            <?php if($site->gdprKitCookieBannerSettingsMandatoryTitle()->isNotEmpty()): ?>
+              <strong><?php echo html::decode($site->gdprKitCookieBannerSettingsMandatoryTitle()->html()) ?></strong>
+            <?php endif ?>
+            <?php if($site->gdprKitCookieBannerSettingsMandatoryDescription()->isNotEmpty()): ?>
+              <p><?php echo html::decode($site->gdprKitCookieBannerSettingsMandatoryDescription()->html()) ?></p>
+            <?php endif ?>
           </div>
             <label class="gdpr-kit__toggle is-disabled">
               <input type="checkbox" id="gdprKitMandatoryCookies" class="gdpr-kit__toggle-input" checked disabled/>
@@ -47,10 +56,19 @@ if($kirby->option('languages'));
             </label><!-- .gdpr-kit__toggle -->
         </div>
 
+        <?php
+        /*
+         * ANALYTICS
+         */
+        ?>
         <div class="gdpr-kit__setting">
           <div class="gdpr-kit__setting__text">
-            <strong>Analytics Cookies</strong>
-            <p>Diese Cookies helfen uns, das Nutzungsverhalten besser zu verstehen.</p>
+            <?php if($site->gdprKitCookieBannerMessage()->isNotEmpty()): ?>
+              <strong><?php echo html::decode($site->gdprKitCookieBannerActionShowSettings()->html()) ?></strong>
+            <?php endif ?>
+            <?php if($site->gdprKitCookieBannerMessage()->isNotEmpty()): ?>
+              <p><?php echo html::decode($site->gdprKitCookieBannerActionShowSettings()->html()) ?></p>
+            <?php endif ?>
           </div>
             <label class="gdpr-kit__toggle">
               <input type="checkbox" id="gdprKitAnalyticsCookies" class="gdpr-kit__toggle-input"/>
@@ -58,10 +76,19 @@ if($kirby->option('languages'));
             </label><!-- .gdpr-kit__toggle -->
         </div>
 
+        <?php
+        /*
+         * MARKETING
+         */
+        ?>
         <div class="gdpr-kit__setting">
           <div class="gdpr-kit__setting__text">
-            <strong>Marketing Cookies</strong>
-            <p>Diese Cookies werden eingesetzt, um Dir personalisierte Inhalte anzeigen zu können.</p>
+            <?php if($site->gdprKitCookieBannerMessage()->isNotEmpty()): ?>
+              <strong><?php echo html::decode($site->gdprKitCookieBannerActionShowSettings()->html()) ?></strong>
+            <?php endif ?>
+            <?php if($site->gdprKitCookieBannerMessage()->isNotEmpty()): ?>
+              <p><?php echo html::decode($site->gdprKitCookieBannerActionShowSettings()->html()) ?></p>
+            <?php endif ?>
           </div>
           <label class="gdpr-kit__toggle">
             <input type="checkbox" id="gdprKitMarketingCookies" class="gdpr-kit__toggle-input"/>
@@ -69,9 +96,17 @@ if($kirby->option('languages'));
           </label><!-- .gdpr-kit__toggle -->
         </div>
 
-        <div>
-          Ausführlichere Informationen zu den verwendeten Cookies findest Du in unserer <a href="#">Datenschutzerklärung</a>.
-        </div>
+        <?php
+        /*
+         * DATA PRIVACY
+         */
+        ?>
+        <?php if($site->gdprKitCookieBannerMessage()->isNotEmpty()): ?>
+          <div>
+            <?php echo html::decode($site->gdprKitCookieBannerActionShowSettings()->html()) ?>
+            Ausführlichere Informationen zu den verwendeten Cookies findest Du in unserer <a href="#">Datenschutzerklärung</a>.
+          </div>
+        <?php endif ?>
 
       </div><!-- .gdpr-kit__settings -->
 
